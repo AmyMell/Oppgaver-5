@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .wrap{
+          background-color: rgb(20, 0, 53);
+          height: 500px;
+          width: 600px;
+          padding: 40px;
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          flex-direction: column;
+      }
+      .CButton{
+          margin-top: 40px;
+          margin-left: 40px;
+          height:55px;
+          width: 500px;
+          font-size: 20px;
+      }
+
+      .clockD{
+          height:30px;
+          width:200px;
+          border: 1px solid black;
+          margin-top: 30px;
+          margin-left: 180px;
+          background-color: rgb(255, 230, 0);
+          font-size: 30px;
+          justify-content: center;
+      }
+
+      .roundsList{
+          background-color: rgb(255, 255, 255);
+          height:80px;
+          width:100px;
+          border: 1px solid black;
+          margin-left: 230px;
+          font-size: small;
+      }
+  </style>
+   
+  </head>
+  <body>
+    <div id="output">0</div><br>
+    <button onclick="setnum(0)">reset</button><br>
+    <button onclick="setnum(67)">set nummer67</button><br>
+    <button onclick="add1()">add1</button><br>
+    <button onclick="add7()">add7</button><br>
+    <button onclick="minus1()">minus1</button><br>
+    <button onclick="minus7()">minus7</button><br>
+   
+
+    
+
+    <div class="wrap">
+      <button class="CButton" onclick="timestart()">Start</button> 
+      <button class="CButton" onclick="pauseTimer()">Pause</button>
+      <button class="CButton" onclick="stopAll()">Stop</button><br>
+      
+      <div id="time" class="clockD"></div>  
+      <div id="lastRound" class="roundsList"> </div> <br>
+  </div>
+   <script src="java.js"></script>
+  </body>
+</html>

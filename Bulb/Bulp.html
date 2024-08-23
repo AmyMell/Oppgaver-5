@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .bulb {
+        width: 400px;
+        height: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bulb" id="bulb">
+      <img onclick="lightdark(this)" src="Bulbimg/bulb-empty.png" />
+    </div>
+  </body>
+  <script>
+    
+    function lightdark(imgElement) {
+        console.log(imgElement.src)  
+      if (imgElement.src == 'http://127.0.0.1:5500/Bulb/Bulbimg/bulb-empty.png') {
+        imgElement.src = "Bulbimg/bulb.png";
+      } else  {
+        imgElement.src = "http://127.0.0.1:5500/Bulb/Bulbimg/bulb-empty.png";
+      }
+      console.log(imgElement.src)
+    }
+
+  </script>
+</html>

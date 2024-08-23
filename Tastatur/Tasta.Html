@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .tasta {
+        height: 450px;
+        width: 1000px;
+        border: 8px solid black;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 1rem;
+        gap: 2rem;
+        font-size: 60px;
+        background-color: rgb(26, 26, 26);
+        justify-content: center;
+      }
+
+      .button {
+        border: 4px solid rgb(39, 39, 39);
+        height: 70px;
+        width: 60px;
+        background-color: rgb(0, 0, 0);
+        justify-content: center;
+        display: flex;
+        color: rgb(132, 0, 255);
+      }
+      .all {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column-reverse;
+      }
+      .text{
+        border: 3px solid black;
+        width:1000px
+        justify-content: center;
+      }
+      .spacebar{
+        border: 4px solid rgb(78, 78, 78);
+        height: 70px;
+        width: 215px;
+        background-color: rgb(0, 0, 0);
+        color: rgb(132, 0, 255);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="all">
+      <div class="text">
+        <input id="text" type="text" readonly />
+      </div>
+      <div class="tasta">
+        <div class="button" onclick="pushedLetter(this)">A</div>
+        <div class="button" onclick="pushedLetter(this)">b</div>
+        <div class="button" onclick="pushedLetter(this)">c</div>
+        <div class="button" onclick="pushedLetter(this)">d</div>
+        <div class="button" onclick="pushedLetter(this)">e</div>
+        <div class="button" onclick="pushedLetter(this)">f</div>
+        <div class="button" onclick="pushedLetter(this)">g</div>
+        <div class="button" onclick="pushedLetter(this)">h</div>
+        <div class="button" onclick="pushedLetter(this)">i</div>
+        <div class="button" onclick="pushedLetter(this)">j</div>
+        <div class="button" onclick="pushedLetter(this)">k</div>
+        <div class="button" onclick="pushedLetter(this)">l</div>
+        <div class="button" onclick="pushedLetter(this)">m</div>
+        <div class="button" onclick="pushedLetter(this)">n</div>
+        <div class="button" onclick="pushedLetter(this)">o</div>
+        <div class="button" onclick="pushedLetter(this)">p</div>
+        <div class="button" onclick="pushedLetter(this)">q</div>
+        <div class="button" onclick="pushedLetter(this)">r</div>
+        <div class="button" onclick="pushedLetter(this)">s</div>
+        <div class="button" onclick="pushedLetter(this)">t</div>
+        <div class="button" onclick="pushedLetter(this)">u</div>
+        <div class="button" onclick="pushedLetter(this)">v</div>
+        <div class="button" onclick="pushedLetter(this)">w</div>
+        <div class="button" onclick="pushedLetter(this)">x</div>
+        <div class="button" onclick="pushedLetter(this)">y</div>
+        <div class="button" onclick="pushedLetter(this)">z</div>
+        <div class="button" onclick="pushedLetter(this)">æ</div>
+        <div class="button" onclick="pushedLetter(this)">ø</div>
+        <div class="button" onclick="pushedLetter(this)">å</div>
+        <div class="spacebar" onclick="pushedLetter(this)">spacebar</div>
+        <div class="button" onclick="delletter(this)">del</div>
+      </div>
+    </div>
+  </body>
+  <script>
+
+        function pushedLetter(element) {
+          //let letterPressed = htmlElement.innerHTML;
+          let letter = element.innerText;
+          if (letter === "spacebar") {
+            letter = " ";
+          }
+
+          document.getElementById("text").value += letter;
+
+        }
+        function delletter(this) {
+          let letter = element.innerText;
+          if (letter === "del") {
+            letter -= letter;
+          }
+         document.getElementById("text").value -= letter;
+        }
+  </script>
+</html>
