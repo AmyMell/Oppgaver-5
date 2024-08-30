@@ -54,3 +54,15 @@ function even() {
     document.getElementById("score").innerHTML = score;
   }
 }
+
+
+function sadtime(){
+  var minus1 = 1;
+  happytime -= minus1
+}
+function play(){
+  if(happytime == 4){
+  } else{
+ var pluss1 = 1;
+ happytime += pluss1}
+}
